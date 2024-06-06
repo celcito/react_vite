@@ -11,7 +11,11 @@ const navigate = useNavigate()
 const postData = async (endpoint: string, payload: any) => {
   try {
     const result = await postRequest(endpoint, payload);
-    const { access_token } = result  
+    const { access_token } = result
+
+    if (!result.hasOwnProperty('access_token'))
+      throw new Error(result.message);
+
     localStorage.setItem('token', access_token);
     toast.success('Login Realizado com sucesso',{
       position: "top-right",
@@ -23,6 +27,7 @@ const postData = async (endpoint: string, payload: any) => {
 
     return result;
   } catch (err:any) {
+
     toast.error(`Erro: ${err.message}`);
        throw err;
   }
