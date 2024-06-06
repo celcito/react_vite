@@ -70,7 +70,7 @@ Agora você pode acessar a aplicação em seu navegador através do endereço `h
 
 ## Proximos passos 
 
-Alterar a arquitetura do projeto para utilizar clean architecture.
+Alterar a arquitetura do projeto para utilizar clean architecture e e incluri redux ou context api incluir gerenciamento de usuários, gerenciamento de roles e gerenciamento de permissões e .
 
 ## Contribuição
 
