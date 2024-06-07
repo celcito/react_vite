@@ -1,8 +1,7 @@
 import axios from 'axios';
-import {ENV} from '../../environment';
 
 const apiClient = axios.create({
- baseURL: ENV.REACT_APP_API_URL,
+  baseURL: import.meta.env.VITE_REACT_APP_API_URL
 });
 
 export const postRequest = async (endpoint: string, data: any) => {
