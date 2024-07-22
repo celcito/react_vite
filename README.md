@@ -43,8 +43,6 @@ Os helpers contêm funções auxiliares para operações específicas, como:
 -Para estilização de componentes React usando CSS-in-JS  utlizado display grid para estrutuação do layoute e flexbox para alinhamento de elementos.
 
 
-
-
 ## Tecnologias Utilizadas
 
 - **React**: Biblioteca JavaScript para construção de interfaces de usuário.
@@ -63,14 +61,14 @@ Para executar o projeto localmente, siga os passos abaixo:
 1. Clone o repositório do projeto.
 2. Instale as dependências executando `npm install` ou `yarn`.
 3. Inicie o servidor de desenvolvimento com `npm run dev` ou `yarn dev`.
-4. Clone o repositório do projeto backend https://github.com/celcito/duo_system.git
+4. Clone o repositório do projeto backend https://github.com/celcito/react_vite.git
 5. Na raiz do  projeto rode o o comando `docker-compose up -d` isso vai iniciar o banco de dados rodar a migration inicial e iniciar o servidor na porta 3000 ps ainda estou trabalhando para rodar todo o serviço junto.
 
 Agora você pode acessar a aplicação em seu navegador através do endereço `http://localhost:5173`.
 
 ## Proximos passos 
 
-Alterar a arquitetura do projeto para utilizar clean architecture e e incluri redux ou context api incluir gerenciamento de usuários, gerenciamento de roles e gerenciamento de permissões e .
+Alterar a arquitetura do projeto para utilizar clean architecture e  incluir redux ou context api incluir gerenciamento de usuários, gerenciamento de roles e gerenciamento de permissões e correção de bug logout .
 
 ## Contribuição
 
