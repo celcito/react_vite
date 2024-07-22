@@ -1,6 +1,6 @@
-# Duo Frontend
-
-Duo é uma aplicação web para gerenciamento de usuários, desenvolvida utilizando as tecnologias React, TypeScript, Vite e Styled Components. A aplicação permite que os usuários se cadastrem, façam login e tenham acesso a áreas protegidas após autenticação.
+# Frontend Vite
+  
+É uma aplicação web para gerenciamento de usuários, desenvolvida utilizando as tecnologias React, TypeScript, Vite e Styled Components. A aplicação permite que os usuários se cadastrem, façam login e tenham acesso a áreas protegidas após autenticação.
 
 ## Estrutura do Projeto
 
