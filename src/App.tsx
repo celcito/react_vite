@@ -7,7 +7,7 @@ import {WelcomePage} from './pages/wellcome-page'
 import {NotFoundPage} from './pages/not-found-page'
 import {ProtectedRoute} from './protected-route';
 import { BrowserRouter as Router,  Routes, Route  } from 'react-router-dom';
-import imagem from './assets/Logotipo-vertical-azul-1024x1024.png';
+//import imagem from './assets/Logotipo-vertical-azul-1024x1024.png';
 
  function App() {
  
@@ -21,7 +21,7 @@ import imagem from './assets/Logotipo-vertical-azul-1024x1024.png';
     <div>
     <CustomHeader>
       <div>
-        <img src={imagem} alt="Logo" />
+        {/* <img src={imagem} alt="Logo" /> */}
       </div>
       <div onClick={handleLogout}>Logout</div>
       
