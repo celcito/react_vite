@@ -8,12 +8,18 @@ import {LoginFormSchema} from './validator'
 export const useFormLogin = () => {
 const navigate = useNavigate()
 
-const postData = async (endpoint: string, payload: any) => {
+type PostDataParams<T> ={
+  endpoint: string;
+  payload: T;
+}
+
+
+const postData =  async <T>(params: PostDataParams<T>) => {
   try {
-    const result = await postRequest(endpoint, payload);
+    const result = await postRequest(params.endpoint, params.payload);
     const { access_token } = result
 
-    if (!result.hasOwnProperty('access_token'))
+    if (!result.hasOwnProperty.call('access_token'))
       throw new Error(result.message);
 
     localStorage.setItem('token', access_token);
@@ -25,16 +31,16 @@ const postData = async (endpoint: string, payload: any) => {
       },
     })
 
-    return result;
+    return result as T;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } catch (err:any) {
 
     toast.error(`Erro: ${err.message}`);
        throw err;
   }
 }
-const handleSubmit = async (values:FormLoginValues) => {
-  await postData('/auth/sign-in', values);
-}
-
+const handleSubmit = async (values: FormLoginValues) => {
+  await postData({ endpoint: '/auth/sign-in', payload: values });
+};
 return {handleSubmit,postData,navigate,LoginFormSchema,ToastContainer, toast }
 }
