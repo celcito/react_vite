@@ -12,7 +12,7 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ children }) => {
     if (!token || tokenExpired) {
       navigate('/login');
     }
-  }, [token, navigate]);
+  }, [token, navigate,tokenExpired]);
 
   return children;
 };

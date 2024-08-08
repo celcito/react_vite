@@ -16,9 +16,9 @@ export const verifyTokenExpired =(token:string)=>{
         const exp = decoded.exp || 0;
         const currentTime = Date.now() / 1000;
         return (exp < currentTime);
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       } catch (error:any) {
         console.error('Erro ao decodificar o token:', error.message);
-        return false;
       }
 
 }

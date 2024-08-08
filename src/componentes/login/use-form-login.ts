@@ -19,7 +19,8 @@ const postData =  async <T>(params: PostDataParams<T>) => {
     const result = await postRequest(params.endpoint, params.payload);
     const { access_token } = result
 
-    if (!result.hasOwnProperty.call('access_token'))
+    // eslint-disable-next-line no-prototype-builtins
+    if (!result.hasOwnProperty('access_token'))
       throw new Error(result.message);
 
     localStorage.setItem('token', access_token);
